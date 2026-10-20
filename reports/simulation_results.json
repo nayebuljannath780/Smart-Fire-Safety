@@ -1,0 +1,3138 @@
+[
+  {
+    "scenario": "normal",
+    "description": "Both zones remain normal.",
+    "trigger_rule": "temperature > 60 C AND smoke > 50%, twice consecutively",
+    "simulated_alert_delay_seconds": null,
+    "simulated_server_awareness_delay_seconds": null,
+    "false_fire_alarms": 0,
+    "fire_alert_count": 0,
+    "missed_expected_fire": false,
+    "measured_execution_ms": 0.39,
+    "final_zone_status": {
+      "Kitchen": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      },
+      "Office": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      }
+    },
+    "events": [
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      }
+    ]
+  },
+  {
+    "scenario": "fire_event",
+    "description": "Kitchen fire-like readings, then recovery.",
+    "trigger_rule": "temperature > 60 C AND smoke > 50%, twice consecutively",
+    "simulated_alert_delay_seconds": 1.0,
+    "simulated_server_awareness_delay_seconds": 1.0,
+    "false_fire_alarms": 0,
+    "fire_alert_count": 1,
+    "missed_expected_fire": false,
+    "measured_execution_ms": 0.34,
+    "final_zone_status": {
+      "Kitchen": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      },
+      "Office": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      }
+    },
+    "events": [
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "FIRE_RAISED",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "RESPONSE_REQUESTED",
+        "message": "Request operator acknowledgement and response-device confirmation; all actions are simulated."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "OPERATOR_CONFIRMED",
+        "message": "Simulated confirmation received."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "ACTUATOR_CONFIRMED",
+        "message": "Simulated confirmation received."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "ALARM_ACTIVE",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "ALARM_ACTIVE",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "FIRE_CLEARED",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      }
+    ]
+  },
+  {
+    "scenario": "failed_sensor",
+    "description": "Kitchen temperature becomes unavailable.",
+    "trigger_rule": "temperature > 60 C AND smoke > 50%, twice consecutively",
+    "simulated_alert_delay_seconds": null,
+    "simulated_server_awareness_delay_seconds": null,
+    "false_fire_alarms": 0,
+    "fire_alert_count": 0,
+    "missed_expected_fire": false,
+    "measured_execution_ms": 0.37,
+    "final_zone_status": {
+      "Kitchen": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      },
+      "Office": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      }
+    },
+    "events": [
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": null,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "SENSOR_FAULT",
+        "message": "Invalid reading: status unknown, retain active alarm, warn operator and request inspection/manual monitoring."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": null,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": null,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "SENSOR_RESTORED",
+        "message": "Valid sensor data received."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      }
+    ]
+  },
+  {
+    "scenario": "lost_network",
+    "description": "Kitchen link fails during a fire-like event.",
+    "trigger_rule": "temperature > 60 C AND smoke > 50%, twice consecutively",
+    "simulated_alert_delay_seconds": 1.0,
+    "simulated_server_awareness_delay_seconds": 4.0,
+    "false_fire_alarms": 0,
+    "fire_alert_count": 1,
+    "missed_expected_fire": false,
+    "measured_execution_ms": 0.298,
+    "final_zone_status": {
+      "Kitchen": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      },
+      "Office": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      }
+    },
+    "events": [
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "local gateway",
+        "kind": "LINK_UNAVAILABLE",
+        "message": "Delivery failed; keep local detection and request manual contact."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "local gateway",
+        "kind": "LINK_UNAVAILABLE",
+        "message": "Delivery failed; keep local detection and request manual contact."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "local gateway",
+        "kind": "FIRE_RAISED",
+        "message": "Local siren requested; remote delivery is unavailable."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "NETWORK_FAULT",
+        "message": "Two missed samples; remote status unknown. Retain alarms, warn operator, inspect link and use manual contact."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "local gateway",
+        "kind": "LINK_UNAVAILABLE",
+        "message": "Delivery failed; keep local detection and request manual contact."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "local gateway",
+        "kind": "LINK_UNAVAILABLE",
+        "message": "Delivery failed; keep local detection and request manual contact."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "LINK_RESTORED",
+        "message": "Fresh reading received; resume evaluation."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "ALARM_SYNCED",
+        "message": "Local alarm retained across outage; request operator response."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "RESPONSE_REQUESTED",
+        "message": "Request operator acknowledgement and response-device confirmation; all actions are simulated."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "OPERATOR_CONFIRMED",
+        "message": "Simulated confirmation received."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "ACTUATOR_CONFIRMED",
+        "message": "Simulated confirmation received."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "ALARM_ACTIVE",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "FIRE_CLEARED",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      }
+    ]
+  },
+  {
+    "scenario": "unconfirmed_operator",
+    "description": "Operator does not acknowledge the alarm.",
+    "trigger_rule": "temperature > 60 C AND smoke > 50%, twice consecutively",
+    "simulated_alert_delay_seconds": 1.0,
+    "simulated_server_awareness_delay_seconds": 1.0,
+    "false_fire_alarms": 0,
+    "fire_alert_count": 1,
+    "missed_expected_fire": false,
+    "measured_execution_ms": 0.327,
+    "final_zone_status": {
+      "Kitchen": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": true
+      },
+      "Office": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      }
+    },
+    "events": [
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "FIRE_RAISED",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "RESPONSE_REQUESTED",
+        "message": "Request operator acknowledgement and response-device confirmation; all actions are simulated."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "ACTUATOR_CONFIRMED",
+        "message": "Simulated confirmation received."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "ALARM_ACTIVE",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "RESPONSE_RETRY",
+        "message": "Retry once: OPERATOR confirmation missing. Keep alarm response requested."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "ALARM_ACTIVE",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "RESPONSE_UNCONFIRMED",
+        "message": "OPERATOR still unconfirmed. Do not claim success. Keep warning; request manual evacuation/response and device inspection."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "FIRE_CLEARED",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      }
+    ]
+  },
+  {
+    "scenario": "unconfirmed_actuator",
+    "description": "Response device does not confirm operation.",
+    "trigger_rule": "temperature > 60 C AND smoke > 50%, twice consecutively",
+    "simulated_alert_delay_seconds": 1.0,
+    "simulated_server_awareness_delay_seconds": 1.0,
+    "false_fire_alarms": 0,
+    "fire_alert_count": 1,
+    "missed_expected_fire": false,
+    "measured_execution_ms": 0.294,
+    "final_zone_status": {
+      "Kitchen": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": true
+      },
+      "Office": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      }
+    },
+    "events": [
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "FIRE_RAISED",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "RESPONSE_REQUESTED",
+        "message": "Request operator acknowledgement and response-device confirmation; all actions are simulated."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "OPERATOR_CONFIRMED",
+        "message": "Simulated confirmation received."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "ALARM_ACTIVE",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "RESPONSE_RETRY",
+        "message": "Retry once: ACTUATOR confirmation missing. Keep alarm response requested."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "ALARM_ACTIVE",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "operator/actuator",
+        "kind": "RESPONSE_UNCONFIRMED",
+        "message": "ACTUATOR still unconfirmed. Do not claim success. Keep warning; request manual evacuation/response and device inspection."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "FIRE_CLEARED",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      }
+    ]
+  },
+  {
+    "scenario": "transient_spike",
+    "description": "One high sample without a sustained event.",
+    "trigger_rule": "temperature > 60 C AND smoke > 50%, twice consecutively",
+    "simulated_alert_delay_seconds": null,
+    "simulated_server_awareness_delay_seconds": null,
+    "false_fire_alarms": 0,
+    "fire_alert_count": 0,
+    "missed_expected_fire": false,
+    "measured_execution_ms": 0.295,
+    "final_zone_status": {
+      "Kitchen": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      },
+      "Office": {
+        "local_alarm_active": false,
+        "server_alarm_active": false,
+        "sensor_fault": false,
+        "network_fault": false,
+        "response_unconfirmed": false
+      }
+    },
+    "events": [
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:00+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:00+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:01+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:01+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 80,
+          "smoke": 85,
+          "humidity": 40
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:02+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:02+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:03+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:03+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:04+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:04+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:05+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:05+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Kitchen",
+          "node_id": "Sensor_Kitchen",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Kitchen",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "sensor",
+        "kind": "READING",
+        "message": "Simulated sensor sample.",
+        "reading": {
+          "zone_id": "Office",
+          "node_id": "Sensor_Office",
+          "timestamp": "2026-10-21T00:00:06+00:00",
+          "temperature": 25,
+          "smoke": 5,
+          "humidity": 50
+        }
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "gateway -> server",
+        "kind": "DELIVERED",
+        "message": "Reading delivered over the simulated link."
+      },
+      {
+        "timestamp": "2026-10-21T00:00:06+00:00",
+        "zone_id": "Office",
+        "stage": "server",
+        "kind": "MONITORING",
+        "message": "Evaluate per-zone alarm rule; humidity is displayed only."
+      }
+    ]
+  }
+]
